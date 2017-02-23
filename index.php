@@ -20,9 +20,39 @@ $results = mysql_query($query);
 while ($row = mysql_fetch_array($results)) {
 	
 	echo $row['Arvo'];
-    	}
+	$vert = (int) $row['Arvo'];
+	echo "<br>";
 
+	/*if(50 < $vert && $vert < 75){
+	echo "##";
+	}else if($vert > 75){
+	echo "###########";
+	}*/
 
+	if($vert < 10){
+	echo "██_________";
+	}else if(9 < $vert && $vert < 20){
+	echo "███________";
+	}else if(19 < $vert && $vert < 30){
+	echo "████_______";
+	}else if(29 < $vert && $vert < 40){
+	echo "█████______";
+	}else if(39 < $vert && $vert < 50){
+	echo "██████_____";
+	}else if(49 < $vert && $vert < 60){
+	echo "███████____";
+	}else if(59 < $vert && $vert < 70){
+	echo "████████___";
+	}else if(69 < $vert && $vert < 80){
+	echo "█████████__";
+	}else if(79 < $vert && $vert < 90){
+	echo "██████████_";
+	}else if(89 < $vert && $vert < 150){
+	echo "███████████";
+	}
+    	
+
+}
 /*
 while ($row = mysql_fetch_array($results)) {
 	echo '<tr>';
