@@ -20,7 +20,7 @@ while True:
   if (130 < desibeli < 20):
      print "virheellinen arvo"
   else:
-    command = "INSERT INTO TESTI_DATA (Arvo) VALUES (%s)"  % (desibeli)
+    command = "INSERT INTO DATA (Arvo) VALUES (%s)"  % (desibeli)
     print(command)
     cursor.execute(command)
     db.commit()
